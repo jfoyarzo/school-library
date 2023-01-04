@@ -84,7 +84,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-- ` https://github.com/jfoyarzo/school-library`
+- `git clone git@github.com:jfoyarzo/school-library.git `
 
 
 
@@ -103,6 +103,14 @@ You can run the code from the CLI or use a plugin like [code-runner](https://mar
 
 - GitHub: [@jfoyarzo](https://github.com/jfoyarzo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorge-felipe-oyarzo-contreras/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **UI layer using CLI**
+- [ ] **Unit tests**
+- [ ] **Web UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

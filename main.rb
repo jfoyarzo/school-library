@@ -2,6 +2,7 @@ require_relative 'book'
 require_relative 'student'
 require_relative 'teacher'
 require_relative 'rental'
+require_relative 'classroom'
 
 class App
   def initialize()
@@ -14,20 +15,34 @@ class App
   end
 
   def list_people
-    @people.each { |person| puts "Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+    @people.each { |person| puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
   end
 
   def create_student
-    print 'Name:'
+    print 'Name: '
     name = gets.chomp
-    print 'Age:'
+    print 'Age: '
     age = gets.chomp
-    print 'Classroom:'
-    classroom = gets.chomp
-    print 'Parent permission? [Y]ES or [N]O:'
+    print 'Classroom: '
+    classroom_label = gets.chomp
+    classroom = Classroom.new(classroom_label)
+    print 'Parent permission? [Y]ES or [N]O: '
     parent_permission = permission_given?
     student = Student.new(classroom, age, name, parent_permission: parent_permission)
-    p student
+    classroom.students.push(student)
+    @people.push(student)
+    puts "Student #{student.name} added successfully"
+  end
+
+  def create_teacher
+    print 'Name: '
+    name = gets.chomp
+    print 'Age: '
+    age = gets.chomp
+    print 'Specialization: '
+    specialization = gets.chomp
+    teacher = Teacher.new(specialization, age, name)
+    @people.push(teacher)
   end
 
   private
@@ -52,3 +67,5 @@ end
 
 app = App.new
 app.create_student
+app.create_teacher
+app.list_people

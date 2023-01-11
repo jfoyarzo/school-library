@@ -55,6 +55,35 @@ class App
     puts 'Book added successfully'
   end
 
+  def create_rental
+    puts 'Select person by option number:'
+    @people.each_with_index(1) do |person, index|
+      puts "#{index} - Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
+    opt_person = gets.chomp
+    person = @people[opt_person - 1]
+    puts 'Select book by option number:'
+    @books.each_with_index(1) { |book, index| puts "#{index} - Author: #{book.author}, Title: #{book.title}" }
+    opt_book = gets.chomp
+    book = @books[opt_book - 1]
+    puts 'Enter date of rental: '
+    date = gets.chomp
+    person.add_rental(date, book)
+    puts 'Rental created successfully'
+  end
+
+  def list_rentals_for_id(id)
+    person = @people.find { |p| p.id == id }
+    if person.rentals
+      puts "-- Rentals for user #{person.name} (ID: #{person.id}) --"
+      person.rentals.each_with_index(1) do |element, index|
+        puts "#{index} - Date: #{element.date}, Book: #{element.book}"
+      end
+    else
+      puts 'This user has no rentals'
+    end
+  end
+
   private
 
   def permission_given?

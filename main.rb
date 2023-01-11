@@ -45,6 +45,16 @@ class App
     @people.push(teacher)
   end
 
+  def create_book
+    print 'Title: '
+    title = gets.chomp
+    print 'Author: '
+    author = gets.chomp
+    book = Book.new(title, author)
+    @books.push(book)
+    puts 'Book added successfully'
+  end
+
   private
 
   def permission_given?
@@ -66,6 +76,6 @@ class App
 end
 
 app = App.new
-app.create_student
-app.create_teacher
-app.list_people
+app.create_book
+app.create_book
+app.list_books

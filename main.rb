@@ -57,15 +57,15 @@ class App
 
   def create_rental
     puts 'Select person by option number:'
-    @people.each_with_index(1) do |person, index|
-      puts "#{index} - Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    @people.each_with_index do |person, index|
+      puts "#{index + 1} - Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
-    opt_person = gets.chomp
-    person = @people[opt_person - 1]
+    opt_person = gets.chomp.to_i - 1
+    person = @people.at(opt_person)
     puts 'Select book by option number:'
-    @books.each_with_index(1) { |book, index| puts "#{index} - Author: #{book.author}, Title: #{book.title}" }
-    opt_book = gets.chomp
-    book = @books[opt_book - 1]
+    @books.each_with_index { |book, index| puts "#{index + 1} - Author: #{book.author}, Title: #{book.title}" }
+    opt_book = gets.chomp.to_i - 1
+    book = @books.at(opt_book)
     puts 'Enter date of rental: '
     date = gets.chomp
     person.add_rental(date, book)
@@ -76,8 +76,8 @@ class App
     person = @people.find { |p| p.id == id }
     if person.rentals
       puts "-- Rentals for user #{person.name} (ID: #{person.id}) --"
-      person.rentals.each_with_index(1) do |element, index|
-        puts "#{index} - Date: #{element.date}, Book: #{element.book}"
+      person.rentals.each_with_index do |element, index|
+        puts "#{index + 1} - Date: #{element.date}, Book: #{element.book}"
       end
     else
       puts 'This user has no rentals'
@@ -105,6 +105,15 @@ class App
 end
 
 app = App.new
+puts 'Create book'
 app.create_book
 app.create_book
+puts 'Create person'
+app.create_student
+app.create_teacher
+puts 'Create rental'
+app.create_rental
+puts 'list books'
 app.list_books
+puts 'list people'
+app.list_people

@@ -11,10 +11,12 @@ class App
   end
 
   def list_books
+    puts
     @books.each { |book| puts "Author: #{book.author}, Title: #{book.title}" }
   end
 
   def list_people
+    puts
     @people.each { |person| puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
   end
 
@@ -43,6 +45,7 @@ class App
     specialization = gets.chomp
     teacher = Teacher.new(specialization, age, name)
     @people.push(teacher)
+    puts "Teacher #{teacher.name} added successfully"
   end
 
   def create_book
@@ -77,7 +80,7 @@ class App
     if person.rentals
       puts "-- Rentals for user #{person.name} (ID: #{person.id}) --"
       person.rentals.each_with_index do |element, index|
-        puts "#{index + 1} - Date: #{element.date}, Book: #{element.book}"
+        puts "#{index + 1} - Date: #{element.date}, Book: #{element.book.title}"
       end
     else
       puts 'This user has no rentals'
@@ -159,6 +162,9 @@ def main
   options.each_with_index { |option, index| puts "#{index + 1} - #{option}" }
   selected_opt = gets.chomp
   select_option(selected_opt)
+  puts
+  puts 'Press Enter key to continue...'
+  gets
   main
 end
 

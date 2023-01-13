@@ -8,6 +8,7 @@ class App
   def initialize()
     @people = []
     @books = []
+    @classrooms = []
   end
 
   def list_books
@@ -27,11 +28,15 @@ class App
     age = gets.chomp
     print 'Classroom: '
     classroom_label = gets.chomp
-    classroom = Classroom.new(classroom_label)
+    classroom = @classrooms.find { |element| element.label == classroom_label }
+    unless classroom
+      classroom = Classroom.new(classroom_label)
+      @classrooms << classroom
+    end
     print 'Parent permission? [Y]ES or [N]O: '
     parent_permission = permission_given?
     student = Student.new(classroom, age, name, parent_permission: parent_permission)
-    classroom.students.push(student)
+    classroom.add_student(student)
     @people.push(student)
     puts "Student #{student.name} added successfully"
   end

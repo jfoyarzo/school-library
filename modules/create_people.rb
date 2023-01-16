@@ -16,6 +16,23 @@ module CreatePeople
     parent_permission
   end
 
+  def select_role
+    loop do
+      puts 'Enter 1 for Student or 2 for Teacher'
+      person_opt = gets.chomp
+      case person_opt
+      when '1'
+        create_student
+        break
+      when '2'
+        create_teacher
+        break
+      else
+        puts 'Invalid option, please try again'
+      end
+    end
+  end
+
   def create_student
     print 'Name: '
     name = gets.chomp

@@ -7,6 +7,8 @@ require_relative 'modules/list_rentals'
 require_relative 'data/write_data'
 
 class App
+  attr_accessor :rentals_json
+
   include CreatePeople
   include CreateBook
   include CreateRental
@@ -18,6 +20,7 @@ class App
   def initialize()
     @people = []
     @books = []
+    @rentals_json = []
     @classrooms = []
   end
 

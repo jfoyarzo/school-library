@@ -1,10 +1,9 @@
 module WriteRentals
   def write_rentals
-    # return if @rentals_json.empty?
 
     @people.each do |person|
       next if person.rentals.empty?
-
+      existing_hash = @rentals_json.find { |hash| hash['id'] == person.id }
       rentals_new = person.rentals.map do |rental|
         {
           title: rental.book.title,
@@ -12,12 +11,15 @@ module WriteRentals
           date: rental.date
         }
       end
-
-      hash = {
-        id: person.id,
-        rentals: rentals_new
-      }
-      @rentals_json << hash
+      if existing_hash
+        existing_hash['rentals'] = rentals_new
+      else 
+        hash = {
+          id: person.id,
+          rentals: rentals_new
+        }
+        @rentals_json << hash
+      end
     end
 
     json = JSON.pretty_generate(@rentals_json)

@@ -7,7 +7,7 @@ module WriteData
   include WriteBooks
   include WritePeople
   include WriteRentals
-  
+
   def write_data
     write_books
     write_people

@@ -10,7 +10,7 @@ module CreatePeople
         parent_permission = false
         break
       else
-        puts 'Please enter a valid option'
+        puts 'Please enter a correct option'
       end
     end
     parent_permission
@@ -28,7 +28,7 @@ module CreatePeople
         create_teacher
         break
       else
-        puts 'Invalid option, please try again'
+        puts 'Incorrect option, please try again'
       end
     end
   end

@@ -6,6 +6,6 @@ module CreateBook
     author = gets.chomp
     book = Book.new(title, author)
     @books.push(book)
-    puts 'Book added successfully'
+    puts 'Book added to the database successfully'
   end
 end

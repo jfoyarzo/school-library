@@ -4,7 +4,7 @@ require_relative 'modules/create_rental'
 require_relative 'modules/list_books'
 require_relative 'modules/list_people'
 require_relative 'modules/list_rentals'
-require_relative 'modules/write_data'
+require_relative 'data/write_data'
 
 class App
   include CreatePeople
@@ -38,7 +38,7 @@ class App
       id = gets.chomp.to_i
       list_rentals_for_id(id)
     else
-      write_data(@books, @people)
+      write_data
       puts 'Thank you for using this app, see you soon!'
       exit
     end

@@ -3,6 +3,8 @@ module WriteRentals
     # return if @rentals_json.empty?
 
     @people.each do |person|
+      next if person.rentals.empty?
+
       rentals_new = person.rentals.map do |rental|
         {
           title: rental.book.title,
@@ -18,7 +20,7 @@ module WriteRentals
       @rentals_json << hash
     end
 
-    json = JSON.pretty_generate(@rentals_json) 
+    json = JSON.pretty_generate(@rentals_json)
     File.write('./json_files/rentals.json', json)
 
     puts 'Rentals saved to file successfully!'

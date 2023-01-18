@@ -12,5 +12,5 @@ module ReadData
     read_people
     read_books
     read_rentals
-  end 
+  end
 end

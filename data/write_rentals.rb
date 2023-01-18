@@ -1,8 +1,8 @@
 module WriteRentals
   def write_rentals
-
     @people.each do |person|
       next if person.rentals.empty?
+
       existing_hash = @rentals_json.find { |hash| hash['id'] == person.id }
       rentals_new = person.rentals.map do |rental|
         {
@@ -13,7 +13,7 @@ module WriteRentals
       end
       if existing_hash
         existing_hash['rentals'] = rentals_new
-      else 
+      else
         hash = {
           id: person.id,
           rentals: rentals_new

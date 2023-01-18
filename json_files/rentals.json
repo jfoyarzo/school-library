@@ -1,18 +1,82 @@
 [
   {
-    "id": 68,
+    "id": 694,
     "rentals": [
       {
-        "title": "t4t2t2t23t2",
-        "author": "a5353535a55aa",
-        "date": ""
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
       }
     ]
   },
   {
-    "id": 68,
+    "id": 694,
     "rentals": [
-
+      {
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
+      }
+    ]
+  },
+  {
+    "id": 694,
+    "rentals": [
+      {
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
+      },
+      {
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "rentals": [
+      {
+        "title": "book2",
+        "author": "author2",
+        "date": "2022/11/11"
+      }
+    ]
+  },
+  {
+    "id": 694,
+    "rentals": [
+      {
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
+      },
+      {
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
+      },
+      {
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
+      },
+      {
+        "title": "book1",
+        "author": "author1",
+        "date": "2022/12/12"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "rentals": [
+      {
+        "title": "book2",
+        "author": "author2",
+        "date": "2022/11/11"
+      }
     ]
   }
 ]

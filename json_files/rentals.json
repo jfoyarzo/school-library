@@ -1,0 +1,27 @@
+[
+  {
+    "id": 408,
+    "rentals": [
+      {
+        "title": "t1",
+        "author": "a1",
+        "date": "2023"
+      },
+      {
+        "title": "t1",
+        "author": "a1",
+        "date": "2023"
+      }
+    ]
+  },
+  {
+    "id": 931,
+    "rentals": [
+      {
+        "title": "t1",
+        "author": "a1",
+        "date": "2023"
+      }
+    ]
+  }
+]

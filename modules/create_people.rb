@@ -39,17 +39,11 @@ module CreatePeople
     print 'Age: '
     age = gets.chomp
     print 'Classroom: '
-    classroom_label = gets.chomp
-    classroom = @classrooms.find { |element| element.label == classroom_label }
-    unless classroom
-      classroom = Classroom.new(classroom_label)
-      @classrooms << classroom
-    end
+    classroom = gets.chomp
     print 'Parent permission? [Y]ES or [N]O: '
     parent_permission = permission_given?
     id = Random.rand(1..1000)
     student = Student.new(id, classroom, age, name, parent_permission: parent_permission)
-    classroom.add_student(student)
     @people.push(student)
     puts "Student #{student.name} added successfully"
   end

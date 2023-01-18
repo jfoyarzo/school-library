@@ -5,6 +5,7 @@ require_relative 'modules/list_books'
 require_relative 'modules/list_people'
 require_relative 'modules/list_rentals'
 require_relative 'data/write_data'
+require_relative 'data/read_data'
 
 class App
   attr_accessor :rentals_json
@@ -16,11 +17,12 @@ class App
   include ListPeople
   include ListRentals
   include WriteData
+  include ReadData
 
   def initialize()
-    @people = []
-    @books = []
-    @rentals_json = []
+    @people = read_people
+    @books = read_books
+    @rentals_json = read_rentals
     @classrooms = []
   end
 

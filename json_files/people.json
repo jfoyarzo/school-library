@@ -1,1 +1,9 @@
-["#<Student:0x00007f593a845a18>"]
+[
+  {
+    "class": "Student",
+    "id": 68,
+    "name": "Unknown",
+    "age": "12",
+    "parent_permission": true
+  }
+]

@@ -11,6 +11,6 @@ module WriteData
   def write_data
     write_books
     write_people
-    # write_rentals
+    write_rentals
   end
 end

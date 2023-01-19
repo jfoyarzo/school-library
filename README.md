@@ -98,6 +98,12 @@ You can run the code from the CLI or use a plugin like [code-runner](https://mar
 - GitHub: [@jfoyarzo](https://github.com/jfoyarzo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorge-felipe-oyarzo-contreras/)
 
+👤 **Mátyás Gombos**
+
+- GitHub: [@MattGomb](https://github.com/MattGomb)
+- Twitter: [@MtysGombos1](https://twitter.com/MtysGombos1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gombos-matyas/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -131,6 +137,10 @@ If you like this project please give it a ⭐!
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse team.
+
+Special Thanks to everyone who will get time to check this code and suggest any [issues](https://github.com/jfoyarzo/school-library/issues).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

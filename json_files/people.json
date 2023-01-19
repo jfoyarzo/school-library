@@ -14,5 +14,13 @@
     "age": "44",
     "parent_permission": true,
     "specialization": "-"
+  },
+  {
+    "class": "Teacher",
+    "id": 751,
+    "name": "dsccs",
+    "age": "sccc",
+    "parent_permission": true,
+    "specialization": "scsdcs"
   }
 ]

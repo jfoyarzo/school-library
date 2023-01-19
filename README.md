@@ -140,7 +140,7 @@ If you like this project please give it a ⭐!
 
 I would like to thank Microverse team.
 
-Special Thanks to everyone who will get time to check this code and suggest any [issue](https://github.com/jfoyarzo/school-library/issues)
+Special Thanks to everyone who will get time to check this code and suggest any [issues](https://github.com/jfoyarzo/school-library/issues).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

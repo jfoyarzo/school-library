@@ -18,5 +18,5 @@ describe Book do
     it 'returns the correct author' do
       expect(@book.author).to eql 'Test author'
     end
-  end  
+  end
 end

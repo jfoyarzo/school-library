@@ -6,8 +6,7 @@ describe 'test rental class' do
     allow(person).to receive(:rentals) { [] }
     @rental = Rental.new('2023-01-19', 'The Little Prince', person)
   end
-  
-  
+
   it 'should return a rental instance with three parameters' do
     expect(@rental).to be_an_instance_of(Rental)
   end

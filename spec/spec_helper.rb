@@ -7,4 +7,3 @@ require_relative '../teacher'
 require_relative '../base_decorator'
 require_relative '../capitalize_decorator'
 require_relative '../trimmer_decorator'
-

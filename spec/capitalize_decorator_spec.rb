@@ -2,7 +2,7 @@ require_relative 'spec_helper'
 
 describe 'test capitalize decorator class' do
   before :each do
-    @person = Person.new(666, 18,'john')
+    @person = Person.new(666, 18, 'john')
     @capitalize_decorator = CapitalizeDecorator.new(@person)
   end
 

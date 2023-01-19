@@ -4,7 +4,7 @@ describe 'test classroom class' do
   before(:each) do
     @classroom = Classroom.new('111')
   end
-  
+
   it 'should return a classroom instance with one parameter' do
     expect(@classroom).to be_an_instance_of(Classroom)
   end
